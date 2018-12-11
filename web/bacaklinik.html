@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="style5.css" rel="stylesheet">
+
+        <!-- font -->
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,900' rel='stylesheet' type='text/css'>
+
+        <title>Rumah Sakit Panti Rapih | Yogyakarta</title>
+    </head>
+    <body>
+
+        <header>
+            <img src="img/logo.png">
+            <h1>Rumah Sakit Panti Rapih</h1>
+            <p>Jl. Cik Di Tiro No.30, Terban, Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55223</p>
+        </header>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="10%"> PANTI RAPIH</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav navbar-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Pasien
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="index.html">Tambah Pasien</a>
+                            <a class="dropdown-item" href="index.html">Cari Pasien</a>
+                            <a class="dropdown-item" href="antriklinik.html">Form Tambah Antrian Pasien</a>
+                            <a class="dropdown-item" href="cariAntrian.html">Cari Antrian Pasien</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Klinik
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="bacaklinik.html">Tampil Daftar Klinik</a>
+                            <a class="dropdown-item" href="tambahklinik.html">Tambah Klinik</a>
+                        </div>
+                    </li>
+                     <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+                            Dokter
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="bacadokter.html">Tampil Daftar Dokter</a>
+                            <a class="dropdown-item" href="tambahDokter.html">Tambah Dokter</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="container form-height">
+            <div class="page-header">
+                <h2>Daftar Klinik</h2>
+                <form class="form-inline form-tam">
+                    <div class="form-group mb-2">
+                        <label>Tampil Daftar Klinik</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="daftar(this.value)">Tampil</button>
+                </form>
+            </div>
+            <p id="demo"></p>
+        </div>
+
+
+        <script>
+            function daftar(sel) {
+                var url = "http://202.94.83.190:8080/rskuWebService_165314051/webresources/klinik";
+                var obj, dbParam, myObj, x, txt = "";
+                obj = {table: sel, limit: 20};
+                dbParam = JSON.stringify(obj);
+
+                var xhttp = new XMLHttpRequest();
+
+                xhttp.onreadystatechange = function ()
+                {
+                    if (this.readyState == 4 && this.status == 200)
+                    {
+                        var myObj = JSON.parse(this.responseText);
+                        txt += '<table class="table">';
+                        txt += '<thead>';
+                        txt += '<tr>';
+                        txt += '<th>ID Klinik</th>';
+                        txt += '<th>Nama Klinik</th>';
+                        txt += '<th>Spesialis</th>';
+                        txt += '</tr>';
+                        txt += '</thead>';
+                        txt += '<tbody>';
+                        for (x in myObj) {
+                            txt += "<tr>";
+                            txt += "<td>" + myObj[x].idKlinik + "</td>";
+                            txt += "<td>" + myObj[x].nama + "</td>";
+                            txt += "<td>" + myObj[x].spesialis + "</td>";
+                            txt += "</tr>";
+                        }
+                        txt += '</tbody>';
+                        txt += "</table>";
+                        document.getElementById("demo").innerHTML = txt;
+                    }
+                };
+                xhttp.open("GET", url, true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send("x=" + dbParam);
+            }
+        </script>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

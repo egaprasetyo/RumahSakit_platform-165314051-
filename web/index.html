@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!-- font awesome -->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="style5.css">
+
+        <!-- font -->
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,900' rel='stylesheet' type='text/css'>
+
+        <title>Rumah Sakit Panti Rapih | Yogyakarta</title>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50" onload="checkCookie()">
+
+        <header>
+            <img src="img/logo.png">
+            <h1>Rumah Sakit Panti Rapih</h1>
+            <p>Jl. Cik Di Tiro No.30, Terban, Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55223</p>
+        </header>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="10%"> PANTI RAPIH</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav navbar-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cp">Profile</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+                            Pasien
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#cp">Tambah Pasien</a>
+                            <a class="dropdown-item" href="#cp">Cari Pasien</a>
+                            <a class="dropdown-item" href="antriklinik.html">Form Tambah Antrian Pasien</a>
+                            <a class="dropdown-item" href="cariAntrian.html">Cari Antrian Pasien</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+                            Klinik
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="bacaklinik.html">Tampil Daftar Klinik</a>
+                            <a class="dropdown-item" href="tambahklinik.html">Tambah Klinik</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+                            Dokter
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="bacadokter.html">Tampil Daftar Dokter</a>
+                            <a class="dropdown-item" href="tambahDokter.html">Tambah Dokter</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nw">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lk">Lokasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Rumah Sakit Panti Rapih</h1>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+            </div>
+        </div>
+
+        <section class="test" id="cp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Mengapa Panti Rapih?</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-6 text-center">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h2>Ortopedik & Traumatologi</h2>
+                        <p>RS Panti Rapih melayani penggantian sendi lutut dan pinggul, pelurusan tulang belakang, serta peyambungan tulang.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-xs-6 text-center">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h2>Urulogi</h2>
+                        <p>Unit bedah urologi melayani tembak batu ginjal dengan ESWL dan penanganan batu ginjal dengan metode PCNL.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-xs-6 text-center">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h2>Kesehatan Ibu dan Anak</h2>
+                        <p>Pelayanan yang bertujuan untuk mengoptimalkan luaran ibu dan bayi dengan pengamatan kehamilan berkelanjutan untuk mencapai “Healthy Mother and Healthy Baby”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="daftar" id="cp">
+            <div class="container">
+                <div class="row">
+                    <div class="colum1 col-md-6">
+                        <a class="btn btn-primary btn-up" data-toggle="collapse" href="#daftar" role="button" aria-expanded="false" aria-controls="daftar">
+                            <h3>Pendaftaran Pasien <span><i class="fa fa-pencil" aria-hidden="true"></i></span></h3>
+                        </a>
+                        <div class="collapse" id="daftar">
+                            <div class="card card-body">
+                                <form onsubmit="return make_json(this)" method="POST">
+                                    <div class="form-group">
+                                        <label>No Rekam Medis</label>
+                                        <input type="text" class="form-control" name="noRM" placeholder="Masukan nomer rekam medis">        
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label>Nama</label>
+                                        <input type="text" class="form-control" name="nama" placeholder="Masukan nama pasien">
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label>Alamat</label>
+                                        <input type="text" class="form-control" name="alamat" placeholder="Masukan alamat">
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label>NIK</label>
+                                        <input type="text" class="form-control" name="nik" placeholder="Masukan NIK">
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label>Tanggal Lahir</label>
+                                        <input type="text" class="form-control" name="tanggalLahir" placeholder="Masukan tanggal lahir">
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label>Kelamin</label>
+                                        <!--<input type="text" class="form-control" name="kelamin" placeholder="Masukan tanggal lahir">--> 
+                                        <select class="form-control" id="kelamin">
+                                            <option>Laki-Laki</option>
+                                            <option>Perempuan</option>
+                                        </select>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-outline-primary btn-sub" data-toggle="modal" data-target="#myModal">Submit</button>
+                                    <!-- The Modal -->
+                                    <div class="modal fade" id="myModal">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Pendaftaran Pasien</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+
+                                                <!-- Modal body -->
+                                                <div class="modal-body">
+                                                    <p>Data Berhasil Disimpan</p>
+                                                </div>
+
+                                                <!-- Modal footer -->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                                <!--                                <pre id="output">
+                                
+                                                                </pre>-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="colum2 col-md-6">
+                        <a class="btn btn-primary btn-up" data-toggle="collapse" href="#cari" role="button" aria-expanded="false" aria-controls="cari">
+                            <h3>Cari Pasien <span><i class="fa fa-search" aria-hidden="true"></i></span></h3>
+                        </a>
+                        <div class="collapse" id="cari">
+                            <div class="card card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Nomor Rekam Medis</label>
+                                        <input type="text" id="noRM" class="form-control" placeholder="Masukan No RM" required>        
+                                    </div>
+                                    <button type="button" id="button" class="btn btn-outline-primary btn-sub" onclick="loadDoc()">Search</button>
+                                    <hr>
+                                    <br>
+                                    <div class="form-group"> 
+                                        <label>Nama</label>
+                                        <input type="text" class="form-control" id="nama" value="">
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label>Alamat</label>
+                                        <input type="text" class="form-control" id="alamat" value="">
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label>NIK</label>
+                                        <input type="text" class="form-control" id="nik" value="">
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label>Tanggal Lahir</label>
+                                        <input type="text" class="form-control" id="tanggalLahir">
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label>Kelamin</label>
+                                        <input type="text" class="form-control" id="gender" value="">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- blog -->
+        <section class="blog" id="nw">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Berita Panti Rapih</h1>
+                        <p style="color: #fff">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-responsive" src="img/6.jpg" style="width: 100%" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Hari Kanker Sedunia</h4>
+                                <p class="card-text">Setiap tahun pada tanggal 4 Februari, WHO, IARC (International Agency for Research on Cancer) dan...</p>
+                                <a href="#" class="btn btn-primary">Load More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-responsive" src="img/6.jpg" style="width: 100%" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Harapan Tentang Pemberantasan HIV AIDS</h4>
+                                <p class="card-text">Perayaan Hari AIDS Sedunia (World AIDS Day) pada Jumat, 1 Desember 2017 memiliki tema 'hak atas sehat'...</p>
+                                <a href="#" class="btn btn-primary">Load More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-responsive" src="img/6.jpg" style="width: 100%" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">Leptospirosis Pasca Banjir</h4>
+                                <p class="card-text">Bencana banjir pada puncak siklon tropis Cempaka di Daerah Istimewa Yogyakarta (DIY) dan Jawa Timur selatan... </p>
+                                <a href="#" class="btn btn-primary">Load More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a href="" class="btn btn-warning btn-lg">Load More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer id="lk">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 part1">
+                        <img src="img/logo.png">
+                        <h3>RUMAH SAKIT PANTI RAPIH</h3>
+                        <p>Rumah Sakit Panti Rapih adalah sebuah rumah sakit di Yogyakarta yang mengembangkan layanan prima dengan fokus pada kebutuhan pasien. Beroperasi sejak 2007, Rumah Sakit Panti Rapih berikhtiar membangun institusi syariah di bidang pelayanan kesehatan.</p>
+
+                        <h2>HUBUNGI KAMI</h2>
+                        <p>Jl.Ringroad Utara no.160 Condong Catur Sleman Yogyakarta 55283</p>
+                        <p>Phone: (0274) 446 3535 Ext. 0 | Fax: (0274) 446 3444</p>
+                        <p>Pendaftaran melalui Whatsapp: 0811 268 3535</p> 
+                        <p>Email: info@rs-pantirapih.co.id</p>
+                    </div>
+
+                    <div class="col-md-6 part2">
+                        <p>LOKASI RUMAH SAKIT PANTI RAPIH</p>
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="minifooter">
+                <p>2013 © Rumah Sakit Panti Rapih. ALL Rights Reserved. Privacy Policy | Terms of Service</p>
+            </div>
+        </footer>
+
+
+
+        <script>
+            function make_json(form) {
+                var json = {
+                    "noRM": form.noRM.value,
+                    "nama": form.nama.value,
+                    "alamat": form.alamat.value,
+                    "nik": form.nik.value,
+                    "tanggalLahir": form.tanggalLahir.value,
+                    "kelamin": form.kelamin.value
+                };
+
+                var html = JSON.stringify(json, 0, 100);
+                var Url = "http://202.94.83.190:8080/rskuWebService_165314051/webresources/pasien/addPasien";
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", Url, false);
+                xhr.setRequestHeader("Content-type", "application/json");
+                xhr.send(html);
+                return false;
+            }
+
+            function loadDoc() {
+                var url = "http://202.94.83.190:8080/rskuWebService_165314051/webresources/pasien/cariPasien?nik=" + noRM.value;
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET", url, true);
+                xhttp.send();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var objj = JSON.parse(this.responseText);
+                        document.getElementById("nama").value = objj.nama;
+                        document.getElementById("alamat").value = objj.alamat;
+                        document.getElementById("nik").value = objj.nik;
+                        document.getElementById("tanggalLahir").value = objj.tanggalLahir;
+                        document.getElementById("gender").value = objj.kelamin;
+                    }
+                }
+            }
+
+
+            var map;
+            function initMap() {
+                var url = "http://202.94.83.190:8080/rskuWebService_165314051/webresources/location";
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var obj = JSON.parse(this.responseText);
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: {lat: obj[0].lat, lng: obj[0].lng},
+                            zoom: 8
+                        });
+                        var marker = [];
+                        for (var i = 0; i < obj.length; i++) {
+                            marker[i] = new google.maps.Marker({position: {lat: obj[i].lat, lng: obj[i].lng}, map: map});
+                        }
+                    }
+                };
+                xhttp.open("GET", url, true);
+                xhttp.send();
+            }
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            function checkCookie() {
+                var email = getCookie("email");
+                var password = getCookie("password");
+                if (email != "") {
+                    alert("Welcome " + email + ", Password: " + password);
+
+                }
+            }
+        </script>
+
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuKYT-wghQgpxI1QXno7gaanTZOJxeqk&callback=initMap"
+        async defer></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

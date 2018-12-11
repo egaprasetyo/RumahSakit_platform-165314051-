@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(img/doctor2.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.login-box{
+    position: absolute;
+    width: 350px;
+    min-height: 200px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.login-box img{
+    width: 25%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+h3{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+}
+
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box button{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"]{
+    border: none;
+    border-bottom: 2px solid #262626;
+    outline: none;
+    height: 40px;
+    color: #262626;
+    background: transparent;
+    font-size: 16px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus{
+    border-bottom: 2px solid #f00;
+}
+
+.input-box{
+    position: relative;
+}
+
+.input-box span{
+    position: absolute;
+    top: 10px;
+    color: #262626;
+}
+
+.login-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    background: #ed292a;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.login-box button{
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    background: #ed292a;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.login-box a{
+    color: #262626;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+p{
+    color: #ed292a;
+}

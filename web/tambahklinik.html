@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!-- font awesome -->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="style5.css">
+
+        <!-- font -->
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,900' rel='stylesheet' type='text/css'>
+
+        <title>Rumah Sakit Panti Rapih | Yogyakarta</title>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+        <header>
+            <img src="img/logo.png">
+            <h1>Rumah Sakit Panti Rapih</h1>
+            <p>Jl. Cik Di Tiro No.30, Terban, Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55223</p>
+        </header>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="10%"> PANTI RAPIH</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav navbar-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Pasien
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="index.html">Tambah Pasien</a>
+                            <a class="dropdown-item" href="index.html">Cari Pasien</a>
+                            <a class="dropdown-item" href="antriklinik.html">Form Tambah Antrian Pasien</a>
+                            <a class="dropdown-item" href="cariAntrian.html">Cari Antrian Pasien</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Klinik
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="bacaklinik.html">Tampil Daftar Klinik</a>
+                            <a class="dropdown-item" href="tambahklinik.html">Tambah Klinik</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+                            Dokter
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="bacadokter.html">Tampil Daftar Dokter</a>
+                            <a class="dropdown-item" href="tambahDokter.html">Tambah Dokter</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="container formTAK form-height">
+            <div id="antrian">
+                <h2>Form Tambah Klinik</h2>
+
+                <form onsubmit="return make_json2(this)" method="POST">
+                    <div class="form-group">
+                        <label>Id Klinik</label>
+                        <input type="text" class="form-control" name="idKlinik" placeholder="Masukan id Klinik">        
+                    </div>
+                    <div class="form-group"> 
+                        <label>Nama Klinik</label>
+                        <input type="text" class="form-control" name="nama" placeholder="Masukan nama klinik">
+                    </div>
+                    <div class="form-group"> 
+                        <label>Spesialis</label>
+                        <input type="text" class="form-control" name="spesialis" placeholder="Masukan spesialis">
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary btn-sub" data-toggle="modal" data-target="#myModal2">Submit</button>
+
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myModal2">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Form Tambah Klinik</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <p>Data Berhasil Disimpan</p>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function make_json2(form)
+            {
+                var json =
+                        {
+                            "idKlinik": form.idKlinik.value,
+                            "nama": form.nama.value,
+                            "spesialis": form.spesialis.value
+                        };
+
+                var html = JSON.stringify(json, 0, 100);
+                var Url = "http://202.94.83.190:8080/rskuWebService_165314051/webresources/klinik/addKlinik";
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", Url, false);
+                xhr.setRequestHeader("Content-type", "application/json");
+                xhr.send(html);
+                return false;
+            }
+        </script>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

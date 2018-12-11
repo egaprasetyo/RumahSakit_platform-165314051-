@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form</title>
+        <link rel="stylesheet" type="text/css" href="style3.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+
+
+        <div class="login-box">
+            <img src="img/user.png">
+            <h3>Sign in here</h3>
+            <form>
+                <div class="input-box">
+                    <input type="text" name="" placeholder="Username" id="username">
+                    <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="" placeholder="Password" id="password">
+                    <span><i class="fa fa-lock" aria-hidden="true"></i></span>
+                </div>
+                <button type="button" onclick="Login2()">Login</button>
+            </form>
+            <a href="#">Forget Password?</a>
+            <p id="output"></p>
+        </div>
+
+
+        <script>
+
+            function setCookie(cname, cvalue, exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+
+            function Login2() {
+                var json = {
+                    "email": username.value,
+                    "password": password.value
+                };
+
+                var html = JSON.stringify(json, 0, 100);
+                var Url = "http://202.94.83.190:8080/rskuWebService_165314051/webresources/user/login";
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", Url, true);
+                xhr.setRequestHeader("Content-type", "application/json");
+                xhr.send(html);
+                xhr.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        if (this.responseText != "") {
+                            var objj = JSON.parse(this.responseText);
+                            window.open("index.html", "_self");
+                            setCookie("email", objj.email, 1);
+                            setCookie("password", objj.password, 1);
+                        } else {
+                            document.getElementById("output").innerHTML = "Username/Password Salah";
+                        }
+
+                    }
+                }
+                return false;
+            }
+        </script>
+
+
+
+
+
+
+    </body>
+</html>

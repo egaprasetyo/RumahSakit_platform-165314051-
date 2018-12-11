@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+header{
+    background-color: #fff;
+    width: 100%;
+    height: 150px;
+}
+
+header img{
+    width: 5%;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 20px;
+    float: left;
+}
+
+header h1{
+    padding-top: 30px;
+    color: #111;
+    letter-spacing: -0.03em;
+    font-weight: 900;
+    font-family: 'Source Sans Pro';
+}
+
+.navbar{
+    margin-top: 0;
+}
+
+nav.navbar.navbar-expand-sm.bg-dark.navbar-dark.sticky-top {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navbar-brand img {
+    margin-left: 43px !important;
+}
+
+.bg-dark {
+    background-color: #2175A4 !important;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+li a.nav-link{
+    padding: 26px 25px !important;
+}
+
+li a.nav-link:hover{
+    background-color: #00B6CE !important;
+}
+
+ul.navbar-nav.navbar-center {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    text-decoration: none;
+    background-color: #fff;
+}
+
+.jumbotron{
+    background: url(img/3.jpg);
+    background-size: cover;
+    font-family: 'Francois One', sans-serif;
+    color: #fff;
+    height: 420px;
+}
+
+.jumbotron h1{
+    padding-top: 40px;
+}
+
+section#cp{
+    padding-top: 80px;
+}
+
+.test h1{
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.test h2{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.daftar{
+    /*margin-top: 30px;*/
+    margin-bottom: 80px;
+}
+
+.colum1{
+    padding: 20px;
+    background-color: #22a7f0;
+}
+
+.colum2{
+    padding: 20px;
+    background-color: #3498db;
+}
+
+.colum3{
+    padding: 20px;
+    background-color: #19b5fe;
+}
+
+.daftar h2{
+    color: #fff;
+}
+
+.daftar{
+    text-align: center;
+}
+
+.daftar .btn-up, .btn-sub{
+    width: 450px;
+}
+
+.daftar .form-group{
+    margin-bottom: 30px;
+}
+
+.daftar .form-inline{
+    margin-bottom: 25px;
+}
+
+.formTAK{
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.formTAK h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.formTAK .btn-sub{
+    width: 20%;
+}
+
+.formTAK .form-group, .form-inline{
+    margin-bottom: 30px;
+}
+
+.btn-sub{
+    margin-bottom: 20px;
+}
+
+.blog{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #267FAD;
+}
+
+.blog h1{
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.blog a.btn.btn-warning.btn-lg {
+    margin-top: 30px;
+}
+
+.page-header{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    
+}
+
+.page-header h2{
+    margin-bottom: 20px;
+}
+
+.mb-2 label{
+    margin-right: 30px;
+}
+
+.form-tam{
+    margin-bottom: 50px;
+}
+
+.form-height{
+    height: 600px;
+}
+
+.form-tam button{
+    width: 15%;
+}
+
+.form-tam p{
+    margin-bottom: 50px;
+}
+
+.form-cari button{
+    width: 15%;
+}
+
+.form-cari input{
+    margin-right: 30px;
+}
+
+footer{
+    background-color: #012F3F;
+    color: #fff;
+    padding-top: 80px;
+}
+
+footer p{
+    text-align: justify;
+}
+
+footer h4{
+    margin-left:30px;
+}
+
+footer #map{
+    height: 400px;
+    width: 100%;
+}
+
+footer .row{
+    font-size: 14px;
+}
+
+footer .part1 h3{
+    font-size: 24px;
+    margin-left: 70px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+footer .part1 img{
+    width: 10%;
+    float: left;
+}
+
+footer .part1 h2{
+    margin-top: 80px;
+}
+
+footer .part1 p{
+    margin: 0;
+}
+
+footer .part2{
+    margin-top: 10px;
+}
+
+footer .minifooter{
+    font-size: 12px;
+    background-color: #01222d;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+footer .minifooter p{
+    text-align: left;
+    margin: 0;
+    margin-left: 110px;
+}
